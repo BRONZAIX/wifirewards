@@ -3,7 +3,7 @@ const sectors = [
   { color: "#0bf", label: "BUKYA" },
   { color: "#fb0", label: "BUKYA" },
   { color: "#0fb", label: "BUKYA" },
-  { color: "#b0f", label: "REWARD" },
+  { color: "#b0f", label: "REWARDS" },
   { color: "#f0b", label: "BUKYA" },
   { color: "#bf0", label: "BUKYA" }
 ];
@@ -11,7 +11,7 @@ window.addEventListener("load", (event) => {
   var money = document.getElementById("money");
   var costToPlay = document.getElementById("cost");
   money.innerHTML = 1;
-  if (money.innerHTML < 1) {
+  if (money.innerHTML < 3) {
     document.getElementById("cost").style.color = "red";
   } else {
     document.getElementById("cost").style.color = "green";
@@ -97,8 +97,8 @@ const frame = () => {
       isSpinning = false;
       angVel = 0;
       alert("You got: " + sector.label);
-      console.log(parseInt(money.innerHTML) + 1000);
-      if (sector.label == "REWARD") {
+      console.log(parseInt(money.innerHTML) + 3);
+      if (sector.label == "REWARDS") {
         money.innerHTML = parseInt(money.innerHTML) + 3;
       } else if (sector.label == "BUKYA") {
         let i = 0;
@@ -108,7 +108,7 @@ const frame = () => {
       }
 
       money.innerHTML -= 1;
-      if (money.innerHTML < 2) {
+      if (money.innerHTML < 3) {
         document.getElementById("cost").style.color = "red";
       } else if (money.innerHTML > 3) {
         alert("You Won!");
