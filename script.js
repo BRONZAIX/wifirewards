@@ -131,7 +131,7 @@ const engine = () => {
 
 elSpin.addEventListener("click", () => {
   if (money.innerHTML < 1) {
-    alert("You dont have spin life to play this game, come back this game tomorrow");
+    alert("You dont have spin points to play this game,");
     return;
   }
   if (isSpinning) return;
