@@ -3,18 +3,47 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
-  <title>ESCODI PISOWIFI GAME REWARDS</title>
+  <title>ESCODO PISOWIFI GAME REWARDS</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet"><link rel="stylesheet" href="./style.css">
 
+
+  <script>
+    function updateDateTime() {
+      var now = new Date();
+      var dateElement = document.getElementById('currentDate');
+      var timeElement = document.getElementById('currentTime');
+
+      // Format the date
+      var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      var formattedDate = now.toLocaleDateString('en-US', options);
+
+      // Format the time
+      var formattedTime = now.toLocaleTimeString();
+
+      // Update the HTML elements
+      dateElement.textContent = '' + formattedDate;
+      timeElement.textContent = '' + formattedTime;
+    }
+
+    // Update the date and time every second
+    setInterval(updateDateTime, 1000);
+  </script>
 </head>
+<header>
+ <body>
+  <code id="currentDate"></code>
+  <br>
+  <code id="currentTime"></code>
+</body> 
+</header>
 <body>
 <!-- partial:index.partial.html -->
 <body>
   <div id="shop"> </div>
-  <h2 id="moneyLeft"> Your spin left: <span id="money"></span>Points<h2>
-      <h1 id="cost"> You need to get 3points to claim your rewards</h1>
+  <h2 id="moneyLeft"> Your spin left: <span id="money"></span>Points/<code>Minutes</code><h2>
+      <h1 id="cost"> You need to get more than 3points to claim your rewards</h1>
 
 </body>
 
@@ -26,21 +55,17 @@
   </div>
 </body>
 
+</body>
+
 <body>
   <h1 class="goal">Goal: <span id="goalnumber">REWARDS</span></h1>
+  
   <h1 class="tbox">This game is made by Nelwyn</h1>
   <p class="tbox">if you win this game please take a screenshot and send into Messenger click "CLAIM YOUR REWARD"</p>
   <a onclick="showshop()" id="shopbutton" href="https://www.facebook.com/nelwyn.escodo25"><h3>Claim Your Reward</h3><a>
 </body>
 <!-- partial -->
   <script  src="./script.js"></script>
-
-<embed 
-src="Spinning Gaming Background Music.mp3"
-loop="true"
-autostart="true"
-hidden="true"
-mastersound>
   
 </body>
 </html>

@@ -70,7 +70,18 @@
     color: white;
     font-family: "Dosis", sans-serif;
 }
+    .mnbox {
+    color: white;
+    font-family: "Dosis", sans-serif;
+    font-family: bold;
+    font-size: 15px;
+}
 
 h1 {
     font-size: 25px;
+}
+
+code {
+      color: white;
+    font-size: 15px;
 }

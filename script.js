@@ -1,17 +1,17 @@
 const sectors = [
   { color: "#f82", label: "BUKYA" },
   { color: "#0bf", label: "BUKYA" },
-  { color: "#fb0", label: "BUKYA" },
+  { color: "#fb0", label: 1  },
   { color: "#0fb", label: "BUKYA" },
   { color: "#b0f", label: "REWARDS" },
   { color: "#f0b", label: "BUKYA" },
-  { color: "#bf0", label: "BUKYA" }
+  { color: "#bf0", label: 1 }
 ];
 window.addEventListener("load", (event) => {
   var money = document.getElementById("money");
   var costToPlay = document.getElementById("cost");
   money.innerHTML = 1;
-  if (money.innerHTML < 2) {
+  if (money.innerHTML > 3) {
     document.getElementById("cost").style.color = "red";
   } else {
     document.getElementById("cost").style.color = "green";
@@ -71,7 +71,7 @@ const drawSector = (sector, i) => {
 const rotate = () => {
   const sector = sectors[getIndex()];
   ctx.canvas.style.transform = `rotate(${ang - PI / 2}rad)`;
-  elSpin.textContent = !angVel ? "SPIN" : sector.label;
+  elSpin.textContent = !angVel ? "-1Point" : sector.label;
   elSpin.style.background = sector.color;
 };
 
@@ -97,9 +97,9 @@ const frame = () => {
       isSpinning = false;
       angVel = 0;
       alert("You got: " + sector.label);
-      console.log(parseInt(money.innerHTML) + 3);
+      console.log(parseInt(money.innerHTML) + 5);
       if (sector.label == "REWARDS") {
-        money.innerHTML = parseInt(money.innerHTML) + 3;
+        money.innerHTML = parseInt(money.innerHTML) + 5;
       } else if (sector.label == "BUKYA") {
         let i = 0;
         i++;
@@ -108,7 +108,7 @@ const frame = () => {
       }
 
       money.innerHTML -= 1;
-      if (money.innerHTML < 2) {
+      if (money.innerHTML < 3) {
         document.getElementById("cost").style.color = "red";
       } else if (money.innerHTML > 3) {
         alert("You Won!");
@@ -131,7 +131,7 @@ const engine = () => {
 
 elSpin.addEventListener("click", () => {
   if (money.innerHTML < 1) {
-    alert("You dont have spin points to play this game,");
+    alert("You don't have spin points to play this game,");
     return;
   }
   if (isSpinning) return;
