@@ -10,8 +10,8 @@ const sectors = [
 window.addEventListener("load", (event) => {
   var money = document.getElementById("money");
   var costToPlay = document.getElementById("cost");
-  money.innerHTML = 3;
-  if (money.innerHTML < 3) {
+  money.innerHTML = 1;
+  if (money.innerHTML < 1) {
     document.getElementById("cost").style.color = "red";
   } else {
     document.getElementById("cost").style.color = "green";
