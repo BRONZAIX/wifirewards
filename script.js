@@ -108,9 +108,9 @@ const frame = () => {
       }
 
       money.innerHTML -= 1;
-      if (money.innerHTML < 3) {
+      if (money.innerHTML < 2) {
         document.getElementById("cost").style.color = "red";
-      } else if (money.innerHTML > 2) {
+      } else if (money.innerHTML > 3) {
         alert("You Won!");
         document.getElementById("goalnumber").style.color = "green";
       } else {
