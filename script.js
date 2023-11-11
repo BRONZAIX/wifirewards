@@ -110,7 +110,7 @@ const frame = () => {
       money.innerHTML -= 1;
       if (money.innerHTML < 3) {
         document.getElementById("cost").style.color = "red";
-      } else if (money.innerHTML > 3) {
+      } else if (money.innerHTML > 2) {
         alert("You Won!");
         document.getElementById("goalnumber").style.color = "green";
       } else {
