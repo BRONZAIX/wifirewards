@@ -1,7 +1,7 @@
 const sectors = [
   { color: "#f82", label: "BUKYA" },
   { color: "#0bf", label: "BUKYA" },
-  { color: "#fb0", label: 2  },
+  { color: "#fb0", label: 1  },
   { color: "#0fb", label: "BUKYA" },
   { color: "#b0f", label: "REWARDS" },
   { color: "#f0b", label: "BUKYA" },
