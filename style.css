@@ -1,3 +1,7 @@
+body {
+  display: block;
+}
+
 #wheelOfFortune {
   display: inline-flex;
   position: relative;
