@@ -95,7 +95,7 @@ const frame = () => {
     if (angVel < angVelMin) {
       const sector = sectors[getIndex()];
       isSpinning = false;
-      angVel = 0;
+      angVel = 1;
       alert("You got: " + sector.label);
       console.log(parseInt(money.innerHTML) + 5);
       if (sector.label == "REWARDS") {
