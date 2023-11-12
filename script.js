@@ -1,7 +1,7 @@
 const sectors = [
   { color: "#f82", label: "BUKYA" },
   { color: "#0bf", label: "BUKYA" },
-  { color: "#fb0", label: 1  },
+  { color: "#fb0", label: 2  },
   { color: "#0fb", label: "BUKYA" },
   { color: "#b0f", label: "REWARDS" },
   { color: "#f0b", label: "BUKYA" },
@@ -10,7 +10,7 @@ const sectors = [
 window.addEventListener("load", (event) => {
   var money = document.getElementById("money");
   var costToPlay = document.getElementById("cost");
-  money.innerHTML = 1;
+  money.innerHTML = 2;
   if (money.innerHTML > 3) {
     document.getElementById("cost").style.color = "red";
   } else {
